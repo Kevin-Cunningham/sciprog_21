@@ -17,7 +17,7 @@ int main(void) {
 /* Second sum */
    sum2 = 0.0;
    for (i=1000; i>0; i--) {
-      /* Insert the same line as above except use sum2 */
+      sum2 += ((float) 1)/i;
    }
 
    printf(" Sum1=%f\n",sum1);
