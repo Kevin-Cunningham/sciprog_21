@@ -34,5 +34,10 @@ int main(void) {
 
    printf("inum=%d,  fnum=%f, inum in binary=%s\n",
       inum,fnum,binnum);
+  
+   /*Exercise 2: Note that the integer and float do not agree*/
+  
+  
+   /*Exercise 3: There are 25 binary digits in the number, a (single) float can represent 24 binary digits*/
 
 }
