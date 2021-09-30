@@ -14,11 +14,12 @@ int main(void) {
 	double sum = tan(a)+tan(b);
 	
 	/*Sum from x_1 to x_11*/
-	for(i=1, i<N ,i++){
-	   sum += 2*tan(i*update)	
+	for(i=1; i<N; i++){
+	   sum += 2*tan(i*update);	
 	}
 
 	/*Multiply sum by (1/2)update */
-	double answer = ((double) 0.5)*update*sum
+	double answer = ((double) 0.5)*update*sum;
 
+	printf("The integration yields %4lf", answer);
 }
