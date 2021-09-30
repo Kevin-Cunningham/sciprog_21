@@ -21,5 +21,5 @@ int main(void) {
 	/*Multiply sum by (1/2)update */
 	double answer = ((double) 0.5)*update*sum;
 
-	printf("The integration yields %4lf", answer);
+	printf("The integration yields %.4lf \n", answer);
 }
