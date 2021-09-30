@@ -22,4 +22,5 @@ int main(void) {
 	double answer = ((double) 0.5)*update*sum;
 
 	printf("The integration yields %.4lf \n", answer);
+	printf("Log(2)-(Numerical result)=%.4lf - %.4lf = %.4lf \n",logf(2),answer, logf(2)-answer);
 }
