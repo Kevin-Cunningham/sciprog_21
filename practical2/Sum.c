@@ -10,7 +10,7 @@ int main(void) {
 /* First sum */
    sum1 = 0.0;
    for (i=1; i<=1000; i++) {
-      /*  Insert here */
+      sum1 += ((float) 1)/i; 
    }
 
 
