@@ -1,19 +1,32 @@
 #include <stdio.h>
 #include <math.h>
 
-float degtorad(float x);
-float results[13], pi = M_PI;
+double degtorad(double x);
+double trap(int numPoints);
+double results[13], pi = M_PI;
 
 
 int main(void)	{
 	int i;
 	for(i=0; i<13; i++){
-		results[i] = tan( degtorad(  ((float) 5.0)*i  ) );
-		printf("%f \n",results[i]);
+		results[i] = tan( degtorad(  ((double) 5.0)*i  ) );
+		printf("%lf \n",results[i]);
 	}
-	
+
+		
 }
 
-float degtorad(float x){
+double degtorad(double x){
 	return x*pi/180;
 }
+
+double trap(int numPoints){
+	double area=0, sum=0, stepsize = (60.0 - 0.0)/numPoints;
+	
+	sum = tan( degtorad((double) 0) ) + tan( degtorad ((double) 60) );
+	
+	int j;
+	 
+	return area;
+}
+
