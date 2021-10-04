@@ -2,20 +2,16 @@
 #include <math.h>
 
 float degtorad(float x);
-float xdeg[13], xrad[13], pi = M_PI;
+float results[13], pi = M_PI;
 
 
 int main(void)	{
-	int i, j;
+	int i;
 	for(i=0; i<13; i++){
-		xdeg[i] = i*((float) 5);
-		printf("%f \n",xdeg[i]);
+		results[i] = tan( degtorad(  ((float) 5.0)*i  ) );
+		printf("%f \n",results[i]);
 	}
-	for(j=0; j<13; j++){
-		xrad[j] = degtorad( xdeg[j] );
-		printf("%f \n", xrad[j]);
-	}
-
+	
 }
 
 float degtorad(float x){
