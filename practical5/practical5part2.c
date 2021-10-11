@@ -22,7 +22,7 @@ int main(void){
 	printf("The difference between the two methods is:\n");
 
 	for (i=0; i<=180; i++){
-		printf("x = %lf, MacLaurin - (Log Approximaiton)=%0.10lf \n",((double) .01)*i-((double) .9),MacLaurin10[i]-LogApprox[i] );
+		printf("x = %lf, MacLaurin - (Log Approximation)=%0.10lf \n",((double) .01)*i-((double) .9),MacLaurin[i]-LogApprox[i] );
 
 	}
 	
