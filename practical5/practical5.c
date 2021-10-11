@@ -14,6 +14,6 @@ int main(void){
 		FibSeries[i]= FibSeries[i-1]+FibSeries[i-2];
 	}
 	for (j=0; j<=n; j++){
-		printf("%d \n",FibSeries[j]);
+		printf("F_%d =  %d \n",j,FibSeries[j]);
 	}
 }
