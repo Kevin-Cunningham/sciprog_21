@@ -1,14 +1,26 @@
 #include <stdio.h>
 #include <math.h>
+
 int main(void){
+
 	double artanhl(double x, double delta);
 	double artanh2(double x);
-	double x;
+	double x[181];
 	double delta;
-	printf("Enter the value x, and required tolerance.\n");
-	scanf("%lf %lf", &x, &delta);
-	printf("The approximation to arctanh is %lf, while the log approximation is %lf \n", artanhl(x,delta), artanh2(x));
+	int i, j;
+	for (i=0; i<=180; i++){
+		x[i] = ((double) .01)*i -((double) .9);
+	}
+	for (j=0; j<=180; j++){
+	printf("n=%d, x=%lf\n",j,x[j]);
+
+	}
+	printf("Enter the required tolerance.\n");
+	scanf("%lf", &delta);
+	
 }
+
+
 double artanhl(double x, double delta){
 	int n = 0;
 	double sum=0.0;
@@ -22,6 +34,8 @@ double artanhl(double x, double delta){
 	}
 	return sum;
 }
+
+
 double artanh2(double x){
 	return ((double) 0.5)*(log(1+x)-log(1-x));
 }
