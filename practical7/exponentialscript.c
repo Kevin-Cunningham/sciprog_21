@@ -1,3 +1,6 @@
+//Compile using
+// gcc -o exp exponentialscript.c -lm
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
