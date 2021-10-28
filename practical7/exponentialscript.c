@@ -4,7 +4,7 @@
 
 void main(){
 	double x, *r;
-	int order, i, j;
+	int order, i, j, k;
 	double factorial(int n);
 
 	//Set x = 1 to estimate e
@@ -23,6 +23,11 @@ void main(){
 
 	for(j=0; j<=order; j++){
 		printf("r[%d] = %.20lf\n",j,r[j]);
+	}
+	double sum=0.0;
+	for(k=0; k<=order; k++){
+		sum += r[k];
+		printf("The first %d terms sum to %lf \n",k,sum);
 	}
 }
 
