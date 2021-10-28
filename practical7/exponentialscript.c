@@ -4,8 +4,8 @@
 
 void main(){
 	double x, *r;
-	int order, i;
-	int factorial(int n);
+	int order, i, j;
+	double factorial(int n);
 
 	//Set x = 1 to estimate e
 	x = 1.0;
@@ -13,24 +13,30 @@ void main(){
 	//Question asks for 15th order
 	order = 15;
 
-	r = (double *) malloc((order+1) * sizeof(int));
+	r = (double *) malloc((order+1) * sizeof(double));
 	
-	for(i=1; i<order; i++){
-	//	r[i] = pow(x,i)/factorial(i);
-		printf("factorial(%d) = %d\n",i,factorial(i));
+	printf("1/10! = %.20lf\n",1.0/ factorial(10));
+
+	for(i=0; i<=order; i++){
+		r[i] = pow(x, i)/factorial(i);
+	}
+
+	for(j=0; j<=order; j++){
+		printf("r[%d] = %.20lf\n",j,r[j]);
 	}
 }
 
 
-int factorial(int n){
-	int j, prod=1;
+double factorial(int n){
+	int j;
+	double fact=1.0;
 	if(n==0){
-		return 1;
+		return 1.0;
 	}
 	else{
 		for(j=1; j<=n; j++){
-			prod = prod*j;
+			fact = fact*j;		
 		}
+		return fact;	
 	}
-	return prod;
 }
