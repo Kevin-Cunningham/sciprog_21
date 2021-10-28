@@ -13,22 +13,29 @@ void main(){
 	//Question asks for 15th order
 	order = 15;
 
+	//Dynamically allocate memory for an array
 	r = (double *) malloc((order+1) * sizeof(double));
 	
-	printf("1/10! = %.20lf\n",1.0/ factorial(10));
-
+	//Assign a term in the sum to each cell in the array
 	for(i=0; i<=order; i++){
 		r[i] = pow(x, i)/factorial(i);
 	}
-
+	
+	//printing all the terms in the sum
 	for(j=0; j<=order; j++){
 		printf("r[%d] = %.20lf\n",j,r[j]);
 	}
+	
+	printf("\n\n\n");
+	
 	double sum=0.0;
+	//Evaluating at each order up to 15 (as set out in the question)
 	for(k=0; k<=order; k++){
 		sum += r[k];
-		printf("The first %d terms sum to %lf \n",k,sum);
+		printf("The first %d terms sum to %.20lf \n",k,sum);
 	}
+	//The approximaion gets worse if we go to too high of an order, as numerical error accumulates
+
 }
 
 
