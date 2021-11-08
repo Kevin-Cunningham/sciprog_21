@@ -5,11 +5,9 @@
 void main(){
 
 	FILE *f;
-	int size, i;
+	int size, i,j;
 	char delim[] = "%d ";
-	char shape[100];
 	
-
 	f = fopen("matrix1.txt","r");
 
 	if (f==NULL){
@@ -18,11 +16,24 @@ void main(){
 	}	
 
 	fscanf(f, "%d", &size);
-	printf("The matrix is of size %d", size);
+	printf("The matrix is %d x %d\n", size, size);
 	
-	for (i = 0; i< size*size; i++){
-		shape = strcpy(shape,delim);
+	int matrix[size][size]; 
+	
+	for(i=0;i<size;i++){
+		for(j=0; j<size;j++){
+		fscanf(f,delim,&matrix[i][j]);
+		}
 	}
-	printf("%s",shape);
 
+	fclose(f);
+	
+	printf("The matrix looks like:\n");
+	for (i=0; i<size; i++){
+		for (j=0;j<size;j++){
+		printf("%d  ",matrix[i][j]);
+		}
+		printf("\n");
+	}
+	
 }
