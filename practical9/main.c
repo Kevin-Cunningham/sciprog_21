@@ -7,9 +7,11 @@ void main(){
 
 	FILE *f;
 	int size, i,j;
-	char delim[] = "%d ";
-	
-	f = fopen("matrix1.txt","r");
+	char delim[] = "%d ", filename[20];
+	printf("What file contains the matrix you want to check?\n");
+	scanf("%s",filename);
+	strcat(filename,".txt");
+	f = fopen(filename,"r");
 
 	if (f==NULL){
 	printf("!! Can't open file!!\n");
