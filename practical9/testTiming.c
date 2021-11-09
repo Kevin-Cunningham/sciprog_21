@@ -79,6 +79,10 @@ void main(){
 	//n=4 takes 13s
 	//n=5 takes 15s
 	//n=6 takes 18s
+	//n=7 takes 20s
+	//n=8 takes 23s
+	//n=9 takes 26s
 	//
-	//The timing is roughly of order Theta(n)
+	//roughly  t(n) ~~ 2n+5
+	//Then we have Big-Theta(n)
 }
