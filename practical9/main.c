@@ -54,8 +54,12 @@ void main(){
 	}
 	printf("\n");
 	int Bool;
-        //Bool = isMagicSquare(matrix, size);
-	//printf("%d\n",Bool);
-	
+        Bool = isMagicSquare(matpoint, size);
+	if (Bool == 1){
+		printf("The matrix IS magic!\n");
+	}
+	else{
+		printf("The matrix is NOT magic!\n");
+	}
 
 }
