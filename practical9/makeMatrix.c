@@ -5,7 +5,10 @@ void main(){
  	FILE *f;
 	//n is the size of the square matrix, i,j are indexing variables, temp is a temporary variable 
 	int n,i,j,temp;
-	
+	char filename[20];
+	printf("What should this matrix be saved as?\n");
+	scanf("%s",filename);
+	strcat(filename,".txt");	
 	//Get the size of the square matrix
 	printf("Size (n) of square matrix:\n");
 	scanf("%d",&n);
@@ -31,7 +34,7 @@ void main(){
 	}	
 	
 	//open file
- 	f = fopen("matrix1.txt","w");
+ 	f = fopen(filename,"w");
        	
 	//print matrix size to file
 	fprintf(f, "%d ", n);
@@ -39,7 +42,7 @@ void main(){
 	//Add matrix to file as a sequence of numbers separated by 
 	for(i=0;i<n;i++){
 		for(j=0;j<n;j++){
-			fprintf(f,"%d,",Mat[i][j]);
+			fprintf(f,"%d ",Mat[i][j]);
 		}
 	}
 
