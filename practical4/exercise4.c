@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+/*Compile using -lm*/
+
 
 /*deg to rad converts degrees to radians*/
 /*trap using the trapezoidal rule to integrate from 0 degrees to 60 degrees in N columns*/
