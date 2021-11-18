@@ -8,7 +8,9 @@ void main(){
 	FILE *f;
 	//Size is the size of the square matrix, e.g. size=3 => 3x3 matrix
 	//i,j are inidces
-	int size, i,j;
+	
+	int** matpoint;
+	int size, i,j, Bool;
 	char delim[] = "%d ", filename[20];
 	
 	//Ask the User what file they want to check
@@ -54,7 +56,7 @@ void main(){
 		rowpoint[i] = &matrix[i][0];
 	}
 	//Create a pointer to pointers in the previous array
-  	int **matpoint;
+ 
 	matpoint = &rowpoint[0];
 	//printf("\nCheck that pointer to matrix works\n");
 	//for(i=0;i<size;i++){
@@ -64,7 +66,6 @@ void main(){
 	//	printf("\n");
 	//}
 	printf("\n");
-	int Bool;
         //Call the isMagicSquare function on our matrix
 	Bool = isMagicSquare(matpoint, size);
 	//If the function returns True (1), then the code prints that the matrix is magic, otherwise it prints that it is not magic
